@@ -498,11 +498,12 @@ a:focus{
 
 @media (width > 1400px) {
     html{
-        font-size: 28px
+        font-size: 24px
     }
    
     .section-1{
         height: 100vh;
+       
     }
     
 }
