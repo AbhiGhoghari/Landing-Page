@@ -1,6 +1,6 @@
 html , body{
     margin: 0;
-   
+    font-family: 'Fraunces', serif;
     font-size: 21px;
 }
 
@@ -94,6 +94,7 @@ p{
     display: none;
     padding-left: 0;
     margin-right: auto;
+    
     
 }
 
@@ -328,8 +329,8 @@ a:focus{
         font-size: 20px;
     }
     h1{
-        margin-top: 6vmax;
-        font-size: 3.8rem;
+        margin-top: 3.5vmax;
+        font-size: 5vmax;
     }
     p{
         font-size: 1rem;
@@ -340,13 +341,18 @@ a:focus{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
+  
+        height: 100vh;
+       
+    
    }
 
    
 
     .section-1 ul {
         display: flex; 
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: 'Barlow', sans-serif; 
       
     }
@@ -499,16 +505,16 @@ a:focus{
     html{
         font-size: 19px
     }
-   
+    
 }
 
-@media (width > 1400px) {
+@media (width > 1550px) {
     html{
         font-size: 24px
     }
    
     .section-1{
-        height: 100vh;
+        height: 90vh;
        
     }
     
