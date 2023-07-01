@@ -1,22 +1,25 @@
 html , body{
     margin: 0;
     font-family: 'Fraunces', serif;
-    font-size: 21px;
+    font-size: 16px;
 }
+
 
 /* =================
 ==  Typography ==
 ==================== */
 
 h1{
-    margin: 0 auto;
+   
+ 
+margin-left: 0 auto;
+margin-right: 0 auto;
  color: white;
- font-size: 3rem;
+ font-size: 2.8rem;
  letter-spacing: 0.1em;
  text-transform: uppercase;
  font-family: 'Fraunces', serif;
- margin-top: 15vmax;
- margin-bottom: 1.5em;
+
 }
 
 h2{
@@ -78,8 +81,75 @@ p{
     padding: 2em 2em 0 2em;
     margin: 0;
     text-align: center;
+    position: relative;
 
 }
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+}
+.arrow img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.navigation-mobile{
+    cursor: pointer;
+}
+.menu::before{
+   
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 0;
+    top: -12%;
+    right:0;
+    background-color: transparent;
+    border-bottom: 50px solid white;
+    border-left: 50px solid transparent;
+   
+    
+    
+   
+}
+.menu{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    margin-inline: 2em;
+    border-radius: 2px;
+    background-color: white;
+    font-family: 'Barlow', sans-serif;
+    padding: 1em 3.5em;
+    box-shadow: -10px 10px 15px  rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 2;
+ 
+}
+.show{
+    display: block;
+}
+.menu-ul{
+    display: flex;
+    flex-direction: column;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+
+}
+ .menu-btn{
+    background-color: #fbd601;
+    padding: 0.8em 2em;
+    font-family: 'Fraunces', serif;
+    color: black;
+    border-radius: 50px;
+ }
+
 
 .navigation{
     display: flex;
@@ -296,30 +366,21 @@ a:hover,
 a:focus{
     margin-right: 1em;
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
 }
-   /* small screen */
 
-   @media (width < 500px) {
-    html{
-        font-size: 14px;
-    }
-    .footer-li{
-        font-size: 1rem;
-    }
-    h1{
-        font-size: 2.5rem;
-        margin-top: 25vmax;
-       
-    }
-    
-   }
+.footer li:hover 
+{
+    color: white;
+    cursor: pointer;
 
-   @media (width > 500px) {
-    h1{
-        margin-top: 22vmax;
-    }
-   }
+}
+.footer img:hover{
+    filter: brightness(100) ;
+}
 
+   
 
 
    /* larger screen */
@@ -328,10 +389,7 @@ a:focus{
     html{
         font-size: 20px;
     }
-    h1{
-        margin-top: 3.5vmax;
-        font-size: 5vmax;
-    }
+   
     p{
         font-size: 1rem;
     }
@@ -346,6 +404,12 @@ a:focus{
         height: 100vh;
        
     
+   }
+   .arrow{
+    top:45%;
+   }
+   .menu{
+    display: none;
    }
 
    
@@ -390,6 +454,8 @@ a:focus{
    }
    .section-2 img{
     height: 100%;
+    display: block;
+    object-fit:cover ;
     
    }
    .order{
@@ -447,7 +513,7 @@ a:focus{
    .client{
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
     padding-inline: 0.5em;
     
     
@@ -501,23 +567,6 @@ a:focus{
 
 
 
-@media (width > 1000px) {
-    html{
-        font-size: 19px
-    }
-    
-}
 
-@media (width > 1550px) {
-    html{
-        font-size: 24px
-    }
-   
-    .section-1{
-        height: 90vh;
-       
-    }
-    
-}
 
 
